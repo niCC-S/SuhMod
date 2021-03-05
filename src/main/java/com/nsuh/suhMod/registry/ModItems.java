@@ -19,13 +19,13 @@ public class ModItems {
     public static final BlockItem RUBY_BLOCK = new BlockItem(ModBlocks.RUBY_BLOCK, new Item.Settings().group(SuhMod.ITEM_GROUP ));
 
     //tool items?
-    public static final ToolItem RUBY_PICKAXE = new ModPickaxe(RubyMaterial.INSTANCE, 5, -2.8f, new Item.Settings().group(ItemGroup.TOOLS));
-    public static final ToolItem RUBY_SHOVEL = new ShovelItem(RubyMaterial.INSTANCE, 5.5f, -3.0f, new Item.Settings().group(ItemGroup.TOOLS));
-    public static final ToolItem RUBY_SWORD = new SwordItem(RubyMaterial.INSTANCE, 7, -2.4f, new Item.Settings().group(ItemGroup.COMBAT));
-    public static final ToolItem RUBY_AXE = new ModAxe(RubyMaterial.INSTANCE, 9, -3.0f, new Item.Settings().group(ItemGroup.COMBAT));
-    public static final ToolItem RUBY_HOE = new ModHoe(RubyMaterial.INSTANCE, 0, -2.0f, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final ToolItem RUBY_PICKAXE = new ModPickaxe(RubyMaterial.INSTANCE, 5, -2.8f, new Item.Settings().group(SuhMod.ITEM_GROUP));
+    public static final ToolItem RUBY_SHOVEL = new ShovelItem(RubyMaterial.INSTANCE, 5.5f, -3.0f, new Item.Settings().group(SuhMod.ITEM_GROUP));
+    public static final ToolItem RUBY_SWORD = new SwordItem(RubyMaterial.INSTANCE, 7, -2.4f, new Item.Settings().group(SuhMod.ITEM_GROUP));
+    public static final ToolItem RUBY_AXE = new ModAxe(RubyMaterial.INSTANCE, 9, -3.0f, new Item.Settings().group(SuhMod.ITEM_GROUP));
+    public static final ToolItem RUBY_HOE = new ModHoe(RubyMaterial.INSTANCE, 0, -2.0f, new Item.Settings().group(SuhMod.ITEM_GROUP));
     //public static final TridentItem TEST = new TridentItem(new Item.Settings().group(ItemGroup.COMBAT).maxDamage(250));
-    public static final ToolItem RUBY_DIGGING_TOOL = new ModDiggingTool(RubyMaterial.INSTANCE, 5, -2.4f, new Item.Settings().group(ItemGroup.TOOLS));
+    public static final ToolItem RUBY_DIGGING_TOOL = new ModDiggingTool(RubyMaterial.INSTANCE, 5, -2.4f, new Item.Settings().group(SuhMod.ITEM_GROUP));
 
 
     //armor items
