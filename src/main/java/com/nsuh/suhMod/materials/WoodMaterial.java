@@ -1,29 +1,28 @@
-package com.nsuh.suhMod.items;
+package com.nsuh.suhMod.materials;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class TestMaterial implements ToolMaterial {
-
-    public static final TestMaterial INSTANCE = new TestMaterial();
+public class WoodMaterial implements ToolMaterial {
+    public static final WoodMaterial INSTANCE = new WoodMaterial();
     @Override
     public int getDurability() {
-        return 500;
+        return 59;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 5.0f;
+        return 2;
     }
 
     @Override
     public float getAttackDamage() {
-        return 3.0f;
+        return 0;
     }
 
     @Override
     public int getMiningLevel() {
-        return 2;
+        return 0;
     }
 
     @Override
@@ -35,6 +34,4 @@ public class TestMaterial implements ToolMaterial {
     public Ingredient getRepairIngredient() {
         return null;
     }
-
-
 }

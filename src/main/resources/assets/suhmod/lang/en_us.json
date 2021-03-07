@@ -12,5 +12,13 @@
   "item.suhmod.ruby_helmet": "Ruby Helmet",
   "item.suhmod.ruby_chestplate": "Ruby Chestplate",
   "item.suhmod.ruby_leggings": "Ruby Leggings",
-  "item.suhmod.ruby_boots": "Ruby Boots"
+  "item.suhmod.ruby_boots": "Ruby Boots",
+  "item.suhmod.ruby_dagger": "Ruby Dagger",
+  "item.suhmod.netherite_dagger": "Netherite Dagger",
+  "item.suhmod.diamond_dagger": "Diamond Dagger",
+  "item.suhmod.gold_dagger": "Gold Dagger",
+  "item.suhmod.iron_dagger": "Iron Dagger",
+  "item.suhmod.stone_dagger": "Stone Dagger",
+  "item.suhmod.wood_dagger": "Wood Dagger",
+  "enchantment.suhmod.poison_enchantment": "Poison"
 }

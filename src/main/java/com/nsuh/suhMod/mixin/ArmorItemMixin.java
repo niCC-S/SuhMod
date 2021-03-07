@@ -2,7 +2,7 @@ package com.nsuh.suhMod.mixin;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import com.nsuh.suhMod.items.RubyArmorMaterial;
+import com.nsuh.suhMod.materials.RubyArmorMaterial;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;

@@ -1,4 +1,4 @@
-package com.nsuh.suhMod.items;
+package com.nsuh.suhMod.materials;
 
 import com.nsuh.suhMod.registry.ModItems;
 import net.minecraft.entity.EquipmentSlot;
