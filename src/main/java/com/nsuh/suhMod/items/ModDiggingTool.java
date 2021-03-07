@@ -36,6 +36,7 @@ public class ModDiggingTool extends MiningToolItem {
         return true;
     }
 
+
     @Override
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state)
     {

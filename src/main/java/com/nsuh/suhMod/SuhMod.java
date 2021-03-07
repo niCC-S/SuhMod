@@ -33,28 +33,6 @@ public class SuhMod implements ModInitializer {
         ModItems.registerItems();
         ModBlocks.registerBlocks();
 
-        //modifyLootTables();
-    }
-
-    private void modifyLootTables()
-    {
-        LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
-            //checks for emerald ore loot table
-            if(EMERALD_ORE_LOOT_TABLE_ID.equals(id))
-            {
-                //add single individual item
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
-                        .rolls(ConstantLootTableRange.create(1))
-                        .with(ItemEntry.builder(ModItems.DAGGER))
-                        .withFunction(SetCountLootFunction.builder(ConstantLootTableRange.create(1)).build());
-                supplier.withPool(poolBuilder.build());
-
-                // add custom loot table
-                FabricLootPoolBuilder poolBuilder2 = FabricLootPoolBuilder.builder()
-                        .rolls(ConstantLootTableRange.create(1))
-                        .with(LootTableEntry.builder(RUBY_BLOCK_LOOT_TABLE_ID));
-                supplier.withPool(poolBuilder2.build());
-            }
-        }));
     }
 }
+

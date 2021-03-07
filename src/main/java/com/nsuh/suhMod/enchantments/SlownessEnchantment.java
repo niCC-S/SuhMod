@@ -9,9 +9,9 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.world.World;
 
-public class PoisonEnchantment extends Enchantment {
+public class SlownessEnchantment extends Enchantment {
 
-    public PoisonEnchantment() {
+    public SlownessEnchantment() {
         super(Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
@@ -35,9 +35,8 @@ public class PoisonEnchantment extends Enchantment {
         //not minecart, armor stand
         if(target instanceof LivingEntity)
         {
-            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 20 + 20 * 2 * level, level - 1));
+            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20 * 2 * level, level - 1));
         }
-
         super.onTargetDamaged(user, target, level);
     }
 }

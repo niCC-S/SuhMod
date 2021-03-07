@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "i",
+    "#",
     "/"
   ],
   "key": {
-    "i": {
-      "item": "minecraft:iron_ingot"
+    "#": {
+      "item": "minecraft:cobblestone"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "suhmod:dagger",
+    "item": "suhmod:stone_dagger",
     "count": 1
   }
 }
