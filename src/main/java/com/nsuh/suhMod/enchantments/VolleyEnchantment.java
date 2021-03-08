@@ -22,12 +22,12 @@ public class VolleyEnchantment extends Enchantment {
 
     @Override
     public int getMinPower(int level) {
-        return 5 + (level - 1) * 9;
+        return 20;
     }
 
     @Override
     public int getMaxPower(int level) {
-        return this.getMinPower(level) + 15;
+        return 50;
     }
 
     @Override
@@ -49,14 +49,14 @@ public class VolleyEnchantment extends Enchantment {
             }
 
             arrowArray[0].setPos(target.getX(), target.getY() + height + (5 * Math.random()), target.getZ());
-            arrowArray[1].setPos(target.getX() + 1 + random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() + random * Math.random() - 0.5);
-            arrowArray[2].setPos(target.getX() - 1 - random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() + random * Math.random() - 0.5);
+            arrowArray[1].setPos(target.getX() + 1 + random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() + random * Math.random() - 0.6f);
+            arrowArray[2].setPos(target.getX() - 1 - random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() + random * Math.random() - 0.6f);
             arrowArray[3].setPos(target.getX() + 1 + random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() + 1 + random * Math.random());
             arrowArray[4].setPos(target.getX() - 1 - random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() + 1 + random * Math.random());
             arrowArray[5].setPos(target.getX() + 1 + random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() - 1 - random * Math.random());
             arrowArray[6].setPos(target.getX() - 1 - random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() - 1 - random * Math.random());
-            arrowArray[7].setPos(target.getX() + random * Math.random() - 0.5, target.getY() + height + (5 * Math.random()), target.getZ() + 1 + random * Math.random());
-            arrowArray[8].setPos(target.getX() + random * Math.random() - 0.5, target.getY() + height + (5 * Math.random()), target.getZ() - 1 - random * Math.random());
+            arrowArray[7].setPos(target.getX() + random * Math.random() - 0.6f, target.getY() + height + (5 * Math.random()), target.getZ() + 1 + random * Math.random());
+            arrowArray[8].setPos(target.getX() + random * Math.random() - 0.6f, target.getY() + height + (5 * Math.random()), target.getZ() - 1 - random * Math.random());
 
 
             for(int i = 0; i < arrowArray.length; i++)
