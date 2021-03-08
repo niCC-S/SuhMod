@@ -34,22 +34,12 @@ public class ExplosionEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         //not minecart, armor stand
-        if(target instanceof LivingEntity)
+        if(target instanceof LivingEntity && !(target instanceof PlayerEntity))
         {
-            target.world.createExplosion( target, target.getX(), target.getY(), target.getZ(), 1.0f * (float)(level), Explosion.DestructionType.BREAK);
+            target.world.createExplosion( target, target.getX(), target.getY(), target.getZ(), 1.0f * (float)(level), Explosion.DestructionType.NONE);
 
         }
-
         super.onTargetDamaged(user, target, level);
-    }
-
-    @Override
-    public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
-        if(attacker instanceof LivingEntity && !(attacker instanceof PlayerEntity))
-        {
-            attacker.world.createExplosion( attacker, attacker.getX(), attacker.getY(), attacker.getZ(), 1.0f * (float)(level), Explosion.DestructionType.NONE);
-        }
-        super.onTargetDamaged(user, attacker, level);
     }
 
 }
