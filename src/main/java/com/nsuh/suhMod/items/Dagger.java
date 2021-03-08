@@ -20,17 +20,24 @@ import java.util.function.Consumer;
 
 public class Dagger extends SwordItem{
     private float bonusDamage;
-    public Dagger(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, float bonusDamage, Settings settings) {
+
+    public Dagger(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
-        this.bonusDamage = bonusDamage;
+        this.bonusDamage = toolMaterial.getAttackDamage() + attackDamage;
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if(attacker.isSneaking())
+        System.out.println(target.getHealth());
+
+        if(attacker.isSneaking() && target.forwardSpeed == 0)
         {
-            target.damage(DamageSource.player((PlayerEntity)(attacker)), bonusDamage);
+
+            target.damage(DamageSource.player((PlayerEntity)(attacker)), (bonusDamage + 1) * 3);
+
         }
+
+        System.out.println(target.getHealth());
         return super.postHit(stack, target, attacker);
     }
 }

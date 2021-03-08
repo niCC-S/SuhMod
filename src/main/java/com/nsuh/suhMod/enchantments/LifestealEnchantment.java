@@ -2,16 +2,16 @@ package com.nsuh.suhMod.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.world.World;
 
-public class SlownessEnchantment extends Enchantment {
+public class LifestealEnchantment extends Enchantment {
 
-    public SlownessEnchantment() {
+    public LifestealEnchantment() {
         super(Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
@@ -27,7 +27,7 @@ public class SlownessEnchantment extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return 3;
+        return 2;
     }
 
     @Override
@@ -35,8 +35,15 @@ public class SlownessEnchantment extends Enchantment {
         //not minecart, armor stand
         if(target instanceof LivingEntity)
         {
-            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20 * 2 * level, level - 1));
+            user.heal(level / 2.0f);
         }
+
         super.onTargetDamaged(user, target, level);
     }
+
+    @Override
+    protected boolean canAccept(Enchantment other) {
+        return super.canAccept(other) && other != Enchantments.SHARPNESS;
+    }
+
 }

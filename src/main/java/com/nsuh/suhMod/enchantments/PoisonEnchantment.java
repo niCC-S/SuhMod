@@ -2,6 +2,7 @@ package com.nsuh.suhMod.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -27,7 +28,7 @@ public class PoisonEnchantment extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return 3;
+        return 2;
     }
 
     @Override
@@ -35,9 +36,14 @@ public class PoisonEnchantment extends Enchantment {
         //not minecart, armor stand
         if(target instanceof LivingEntity)
         {
-            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 20 + 20 * 2 * level, level - 1));
+            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 80 + (level - 1) * 60, 0));
         }
 
         super.onTargetDamaged(user, target, level);
+    }
+
+    @Override
+    protected boolean canAccept(Enchantment other) {
+        return super.canAccept(other) && other != Enchantments.FIRE_ASPECT;
     }
 }
