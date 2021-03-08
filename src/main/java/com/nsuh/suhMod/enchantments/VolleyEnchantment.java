@@ -14,9 +14,9 @@ import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class ArrowRainEnchantment extends Enchantment {
+public class VolleyEnchantment extends Enchantment {
 
-    public ArrowRainEnchantment() {
+    public VolleyEnchantment() {
         super(Rarity.RARE, EnchantmentTarget.BOW, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
