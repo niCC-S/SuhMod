@@ -1,6 +1,7 @@
 package com.nsuh.suhMod.registry;
 
 import com.nsuh.suhMod.SuhMod;
+import com.nsuh.suhMod.enchantments.ArrowRainEnchantment;
 import com.nsuh.suhMod.enchantments.LifestealEnchantment;
 import com.nsuh.suhMod.enchantments.PoisonEnchantment;
 import com.nsuh.suhMod.enchantments.ExplosionEnchantment;
@@ -53,6 +54,7 @@ public class ModItems {
     public static final Enchantment POISON_ENCHANTMENT = new PoisonEnchantment();
     public static final Enchantment LIFESTEAL_ENCHANTMENT = new LifestealEnchantment();
     public static final Enchantment EXPLOSION_ENCHANTMENT = new ExplosionEnchantment();
+    public static final Enchantment ARROW_RAIN_ENCHANTMENT = new ArrowRainEnchantment();
     public static void registerItems(){
 
         //Ruby items
@@ -81,5 +83,7 @@ public class ModItems {
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "poison_enchantment"), POISON_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "lifesteal_enchantment"), LIFESTEAL_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "explosion_enchantment"), EXPLOSION_ENCHANTMENT);
+        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "arrow_rain_enchantment"), ARROW_RAIN_ENCHANTMENT);
+
     }
 }

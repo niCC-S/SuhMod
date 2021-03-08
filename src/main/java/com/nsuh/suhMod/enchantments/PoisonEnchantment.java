@@ -38,7 +38,6 @@ public class PoisonEnchantment extends Enchantment {
         {
             ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 80 + (level - 1) * 60, 0));
         }
-
         super.onTargetDamaged(user, target, level);
     }
 
