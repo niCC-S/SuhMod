@@ -3,6 +3,7 @@ package com.nsuh.suhMod.registry;
 import com.nsuh.suhMod.SuhMod;
 import com.nsuh.suhMod.enchantments.LifestealEnchantment;
 import com.nsuh.suhMod.enchantments.PoisonEnchantment;
+import com.nsuh.suhMod.enchantments.ExplosionEnchantment;
 import com.nsuh.suhMod.items.*;
 import com.nsuh.suhMod.materials.*;
 import net.minecraft.enchantment.Enchantment;
@@ -51,6 +52,8 @@ public class ModItems {
     //enchants
     public static final Enchantment POISON_ENCHANTMENT = new PoisonEnchantment();
     public static final Enchantment LIFESTEAL_ENCHANTMENT = new LifestealEnchantment();
+    public static final Enchantment EXPLOSION_ENCHANTMENT = new ExplosionEnchantment();
+    //public static final Enchantment HEALTH_ENCHANTMENT =  new HealthEnchantment();
     public static void registerItems(){
 
         //Ruby items
@@ -77,5 +80,7 @@ public class ModItems {
         //Enchants
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "poison_enchantment"), POISON_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "lifesteal_enchantment"), LIFESTEAL_ENCHANTMENT);
+        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "explosion_enchantment"), EXPLOSION_ENCHANTMENT);
+        //Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "health_enchantment"), HEALTH_ENCHANTMENT);
     }
 }

@@ -33,7 +33,7 @@ public class LifestealEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         //not minecart, armor stand
-        if(target instanceof LivingEntity)
+        if(target instanceof LivingEntity && !user.handSwinging)
         {
             user.heal(level / 2.0f);
         }

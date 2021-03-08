@@ -21,5 +21,6 @@
   "item.suhmod.stone_dagger": "Stone Dagger",
   "item.suhmod.wood_dagger": "Wood Dagger",
   "enchantment.suhmod.poison_enchantment": "Poison",
-  "enchantment.suhmod.lifesteal_enchantment": "Lifesteal"
+  "enchantment.suhmod.lifesteal_enchantment": "Lifesteal",
+  "enchantment.suhmod.explosion_enchantment": "Explode"
 }
