@@ -76,6 +76,7 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "gold_dagger"), GOLD_DAGGER);
         Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "stone_dagger"), STONE_DAGGER);
         Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "wood_dagger"), WOOD_DAGGER);
+
         //Enchants
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "poison_enchantment"), POISON_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "lifesteal_enchantment"), LIFESTEAL_ENCHANTMENT);

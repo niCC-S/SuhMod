@@ -37,7 +37,6 @@ public class ExplosionEnchantment extends Enchantment {
         if(target instanceof LivingEntity && !(target instanceof PlayerEntity))
         {
             target.world.createExplosion( target, target.getX(), target.getY(), target.getZ(), 1.0f * (float)(level), Explosion.DestructionType.NONE);
-
         }
         super.onTargetDamaged(user, target, level);
     }
