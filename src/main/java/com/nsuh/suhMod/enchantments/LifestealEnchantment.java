@@ -27,13 +27,13 @@ public class LifestealEnchantment extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return 3;
+        return 2;
     }
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         //not minecart, armor stand
-        if(target instanceof LivingEntity && !user.handSwinging)
+        if(target instanceof LivingEntity && !user.handSwinging && !((LivingEntity)(target)).getRecentDamageSource().name.equals("arrow"))
         {
             user.heal(level / 2.0f);
         }

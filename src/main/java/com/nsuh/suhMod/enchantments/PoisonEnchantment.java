@@ -34,7 +34,7 @@ public class PoisonEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         //not minecart, armor stand
-        if(target instanceof LivingEntity)
+        if(target instanceof LivingEntity && !user.handSwinging && !((LivingEntity)(target)).getRecentDamageSource().name.equals("arrow"))
         {
             ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 80 + (level - 1) * 60, 0));
         }

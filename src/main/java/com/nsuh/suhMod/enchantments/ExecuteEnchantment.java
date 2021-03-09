@@ -11,6 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Items;
 
 public class ExecuteEnchantment extends Enchantment {
 
@@ -36,7 +37,8 @@ public class ExecuteEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         //not minecart, armor stand
-        if(target instanceof LivingEntity)
+
+        if(target instanceof LivingEntity && !user.handSwinging && !((LivingEntity)(target)).getRecentDamageSource().name.equals("arrow"))
         {
             ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(ModItems.EXECUTE, 60, 1));
         }
