@@ -1,14 +1,14 @@
 package com.nsuh.suhMod.registry;
 
 import com.nsuh.suhMod.SuhMod;
-import com.nsuh.suhMod.enchantments.VolleyEnchantment;
-import com.nsuh.suhMod.enchantments.LifestealEnchantment;
-import com.nsuh.suhMod.enchantments.PoisonEnchantment;
-import com.nsuh.suhMod.enchantments.ExplosionEnchantment;
+import com.nsuh.suhMod.effects.ExecuteEffect;
+import com.nsuh.suhMod.enchantments.*;
 import com.nsuh.suhMod.items.*;
 import com.nsuh.suhMod.materials.*;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -50,11 +50,13 @@ public class ModItems {
     public static final Item RUBY_LEGGINGS = new ArmorItem(RubyArmorMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings().group(SuhMod.ITEM_GROUP));
     public static final Item RUBY_BOOTS = new ArmorItem(RubyArmorMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings().group(SuhMod.ITEM_GROUP));
 
+    public static final StatusEffect EXECUTE = new ExecuteEffect(StatusEffectType.HARMFUL, 0xFFF200);
     //enchants
     public static final Enchantment POISON_ENCHANTMENT = new PoisonEnchantment();
     public static final Enchantment LIFESTEAL_ENCHANTMENT = new LifestealEnchantment();
     public static final Enchantment EXPLOSION_ENCHANTMENT = new ExplosionEnchantment();
     public static final Enchantment VOLLEY_ENCHANTMENT = new VolleyEnchantment();
+    public static final Enchantment EXECUTE_ENCHANTMENT = new ExecuteEnchantment();
     public static void registerItems(){
 
         //Ruby items
@@ -84,6 +86,11 @@ public class ModItems {
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "lifesteal_enchantment"), LIFESTEAL_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "explosion_enchantment"), EXPLOSION_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "volley_enchantment"), VOLLEY_ENCHANTMENT);
+        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "execute_enchantment"), EXECUTE_ENCHANTMENT);
+
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(SuhMod.MOD_ID, "execute_effect"), EXECUTE);
+
+
 
     }
 }

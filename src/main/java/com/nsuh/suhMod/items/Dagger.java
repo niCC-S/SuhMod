@@ -37,7 +37,8 @@ public class Dagger extends SwordItem{
 
         }
 
-        System.out.println(target.getHealth());
+        System.out.println(target.getName());
+        System.out.println(attacker.getName().asString());
         return super.postHit(stack, target, attacker);
     }
 }

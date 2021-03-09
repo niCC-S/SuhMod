@@ -69,8 +69,5 @@ public class VolleyEnchantment extends Enchantment {
         }
     }
 
-    @Override
-    protected boolean canAccept(Enchantment other) {
-        return super.canAccept(other) && other != Enchantments.FIRE_ASPECT;
-    }
+
 }
