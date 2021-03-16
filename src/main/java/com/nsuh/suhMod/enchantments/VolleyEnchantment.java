@@ -41,7 +41,7 @@ public class VolleyEnchantment extends Enchantment {
         World world = user.world;
         ArrowEntity[] arrowArray = new ArrowEntity[9];
         int random = 2;
-        int height = 60;
+        int height = 60 + (5 * level);
         if(target instanceof LivingEntity)
         {
             for(int i = 0; i < arrowArray.length; i++) {
@@ -62,7 +62,7 @@ public class VolleyEnchantment extends Enchantment {
             for(int i = 0; i < arrowArray.length; i++)
             {
                 //arrowArray[i].setVelocity(arrowArray[i].getX(), arrowArray[i].getY(), arrowArray[i].getZ(), 10.0f, 1);
-                arrowArray[i].setVelocity(0, -4,0);
+                arrowArray[i].setVelocity(0, -3 + (-1 * level),0);
                 world.spawnEntity(arrowArray[i]);
             }
 

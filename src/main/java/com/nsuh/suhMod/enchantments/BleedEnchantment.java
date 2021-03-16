@@ -1,5 +1,6 @@
 package com.nsuh.suhMod.enchantments;
 
+import com.nsuh.suhMod.registry.ModEnchants;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.enchantment.Enchantments;
@@ -10,9 +11,11 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.world.World;
 
-public class PoisonEnchantment extends Enchantment {
+import java.util.Objects;
 
-    public PoisonEnchantment() {
+public class BleedEnchantment extends Enchantment {
+
+    public BleedEnchantment() {
         super(Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
@@ -34,9 +37,9 @@ public class PoisonEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         //not minecart, armor stand
-        if(target instanceof LivingEntity && !user.handSwinging && !((LivingEntity)(target)).getRecentDamageSource().name.equals("arrow"))
+        if(target instanceof LivingEntity && !user.handSwinging && !Objects.requireNonNull(((LivingEntity) (target)).getRecentDamageSource()).name.equals("arrow"))
         {
-            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 80 + (level - 1) * 60, 0));
+            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(ModEnchants.BLEED, 80 + (level - 1) * 60, 0));
         }
         super.onTargetDamaged(user, target, level);
     }

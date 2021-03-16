@@ -34,7 +34,6 @@ public class Dagger extends SwordItem{
         {
 
             target.damage(DamageSource.player((PlayerEntity)(attacker)), (bonusDamage + 1) * 3);
-
         }
 
         System.out.println(target.getName());

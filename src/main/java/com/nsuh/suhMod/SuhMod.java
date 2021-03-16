@@ -1,6 +1,7 @@
 package com.nsuh.suhMod;
 
 import com.nsuh.suhMod.registry.ModBlocks;
+import com.nsuh.suhMod.registry.ModEnchants;
 import com.nsuh.suhMod.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -32,7 +33,7 @@ public class SuhMod implements ModInitializer {
     public void onInitialize() {
         ModItems.registerItems();
         ModBlocks.registerBlocks();
-
+        ModEnchants.registerItems();
     }
 }
 

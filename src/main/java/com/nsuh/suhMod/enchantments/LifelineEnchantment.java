@@ -1,25 +1,20 @@
 package com.nsuh.suhMod.enchantments;
 
-import com.nsuh.suhMod.effects.ExecuteEffect;
 import com.nsuh.suhMod.registry.ModEnchants;
-import com.nsuh.suhMod.registry.ModItems;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Items;
 
 import java.util.Objects;
 
-public class ExecuteEnchantment extends Enchantment {
+public class LifelineEnchantment extends Enchantment {
 
-    public ExecuteEnchantment() {
-        super(Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+    public LifelineEnchantment() {
+        super(Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
     @Override
@@ -38,14 +33,16 @@ public class ExecuteEnchantment extends Enchantment {
     }
 
     @Override
-    public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        //not minecart, armor stand
-
-        if(target instanceof LivingEntity && !user.handSwinging && !Objects.requireNonNull(((LivingEntity) (target)).getRecentDamageSource()).name.equals("arrow"))
+    public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
+        System.out.println(!user.hasStatusEffect(ModEnchants.LIFELINE_COOLDOWN));
+        System.out.println(user.getHealth());
+        if(user.getHealth() < 6.0f && !user.hasStatusEffect(ModEnchants.LIFELINE_COOLDOWN))
         {
-            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(ModEnchants.EXECUTE, 60, 1));
+            System.out.println("test");
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 160, 1));
+            user.addStatusEffect(new StatusEffectInstance(ModEnchants.LIFELINE_COOLDOWN, 6000, 0));
         }
-        super.onTargetDamaged(user, target, level);
+        super.onUserDamaged(user, attacker, level);
     }
 
     @Override

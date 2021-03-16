@@ -1,6 +1,7 @@
 package com.nsuh.suhMod.registry;
 
 import com.nsuh.suhMod.SuhMod;
+import com.nsuh.suhMod.blocks.RubyDoor;
 import com.nsuh.suhMod.effects.ExecuteEffect;
 import com.nsuh.suhMod.enchantments.*;
 import com.nsuh.suhMod.items.*;
@@ -20,7 +21,7 @@ public class ModItems {
 
     //block items
     public static final BlockItem RUBY_BLOCK = new BlockItem(ModBlocks.RUBY_BLOCK, new Item.Settings().group(SuhMod.ITEM_GROUP ));
-
+    public static final BlockItem RUBY_DOOR = new BlockItem(ModBlocks.RUBY_DOOR, new Item.Settings().group(SuhMod.ITEM_GROUP));
     //tool items?
     public static final ToolItem RUBY_PICKAXE = new ModPickaxe(RubyMaterial.INSTANCE, 5, -2.8f, new Item.Settings().group(SuhMod.ITEM_GROUP));
     public static final ToolItem RUBY_SHOVEL = new ShovelItem(RubyMaterial.INSTANCE, 5.5f, -3.0f, new Item.Settings().group(SuhMod.ITEM_GROUP));
@@ -50,13 +51,7 @@ public class ModItems {
     public static final Item RUBY_LEGGINGS = new ArmorItem(RubyArmorMaterial.INSTANCE, EquipmentSlot.LEGS, new Item.Settings().group(SuhMod.ITEM_GROUP));
     public static final Item RUBY_BOOTS = new ArmorItem(RubyArmorMaterial.INSTANCE, EquipmentSlot.FEET, new Item.Settings().group(SuhMod.ITEM_GROUP));
 
-    public static final StatusEffect EXECUTE = new ExecuteEffect(StatusEffectType.HARMFUL, 0xFFF200);
-    //enchants
-    public static final Enchantment POISON_ENCHANTMENT = new PoisonEnchantment();
-    public static final Enchantment LIFESTEAL_ENCHANTMENT = new LifestealEnchantment();
-    public static final Enchantment EXPLOSION_ENCHANTMENT = new ExplosionEnchantment();
-    public static final Enchantment VOLLEY_ENCHANTMENT = new VolleyEnchantment();
-    public static final Enchantment EXECUTE_ENCHANTMENT = new ExecuteEnchantment();
+
     public static void registerItems(){
 
         //Ruby items
@@ -82,13 +77,9 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "wood_dagger"), WOOD_DAGGER);
 
         //Enchants
-        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "poison_enchantment"), POISON_ENCHANTMENT);
-        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "lifesteal_enchantment"), LIFESTEAL_ENCHANTMENT);
-        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "explosion_enchantment"), EXPLOSION_ENCHANTMENT);
-        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "volley_enchantment"), VOLLEY_ENCHANTMENT);
-        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "execute_enchantment"), EXECUTE_ENCHANTMENT);
 
-        Registry.register(Registry.STATUS_EFFECT, new Identifier(SuhMod.MOD_ID, "execute_effect"), EXECUTE);
+
+        Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "ruby_door"), RUBY_DOOR);
 
 
 

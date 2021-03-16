@@ -20,10 +20,12 @@
   "item.suhmod.iron_dagger": "Iron Dagger",
   "item.suhmod.stone_dagger": "Stone Dagger",
   "item.suhmod.wood_dagger": "Wood Dagger",
-  "enchantment.suhmod.poison_enchantment": "Poison",
+  "enchantment.suhmod.bleed_enchantment": "Bleed",
   "enchantment.suhmod.lifesteal_enchantment": "Lifesteal",
   "enchantment.suhmod.explosion_enchantment": "Explode",
   "enchantment.suhmod.volley_enchantment": "Volley",
   "enchantment.suhmod.execute_enchantment": "Execute",
-  "effect.suhmod.execute_effect": "Execution"
+  "effect.suhmod.execute_effect": "Execution",
+  "effect.suhmod.bleed_effect": "Bleed",
+  "effect.suhmod.lifeline_cooldown_effect": "Lifeline Cooldown"
 }

@@ -8,22 +8,18 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.world.World;
 
-public class ExecuteEffect extends StatusEffect {
-    public ExecuteEffect(StatusEffectType type, int color) {
+public class BleedEffect extends StatusEffect {
+    public BleedEffect(StatusEffectType type, int color) {
         super(type, color);
     }
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        //World world = entity.world;
-        //LightningEntity lightning = EntityType.LIGHTNING_BOLT.create(world);
-        //lightning.setPos(entity.getX(), entity.getY(), entity.getZ());
-        entity.damage(DamageSource.OUT_OF_WORLD, amplifier * 2.0f); // true damage
-        //world.spawnEntity(lightning);
+         entity.damage(DamageSource.OUT_OF_WORLD, amplifier * 1);// true damage
     }
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        return duration <= 1;
+        return duration % 27 == 0;
     }
 }
