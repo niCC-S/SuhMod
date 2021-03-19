@@ -28,7 +28,6 @@ public class Dagger extends SwordItem{
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        System.out.println(target.getHealth());
 
         if(attacker.isSneaking() && target.forwardSpeed == 0)
         {
@@ -36,7 +35,7 @@ public class Dagger extends SwordItem{
             target.damage(DamageSource.player((PlayerEntity)(attacker)), (bonusDamage + 1) * 3);
         }
 
-        System.out.println(target.getName());
+        System.out.println(attacker.getName().asString().hashCode());
         System.out.println(attacker.getName().asString());
         return super.postHit(stack, target, attacker);
     }

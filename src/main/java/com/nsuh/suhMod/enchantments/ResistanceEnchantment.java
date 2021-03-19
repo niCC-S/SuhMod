@@ -9,27 +9,24 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.world.World;
 
 import java.util.Objects;
 
-public class LifelineEnchantment extends Enchantment {
+public class ResistanceEnchantment extends Enchantment {
 
-    public LifelineEnchantment() {
+    public ResistanceEnchantment() {
         super(Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
     @Override
     public int getMinPower(int level) {
-        return 5 + (level - 1) * 9;
+        return 10 + 20 * (level - 1);
     }
 
     @Override
     public int getMaxPower(int level) {
-        return this.getMinPower(level) + 15;
+        return super.getMinPower(level) + 50;
     }
 
     @Override
@@ -39,18 +36,24 @@ public class LifelineEnchantment extends Enchantment {
 
     @Override
     public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
-
-        if(user.getHealth() < 10.0f && !user.hasStatusEffect(ModEnchants.LIFELINE_COOLDOWN))
-        {
-            ((PlayerEntity)(user)).playSound(SoundEvents.BLOCK_BELL_USE, 20.0f, 1.0f); //try type casting to palyer
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200, level));
-            user.addStatusEffect(new StatusEffectInstance(ModEnchants.LIFELINE_COOLDOWN, 6000, 0));
+        System.out.println("test");
+        int amp;
+        if(user.getStatusEffect(StatusEffects.RESISTANCE) == null) {
+            amp = 0;
         }
+        else {
+            amp = 1 + Objects.requireNonNull(user.getStatusEffect(StatusEffects.RESISTANCE)).getAmplifier();
+        }
+        if(amp > level - 1) {
+            amp = level - 1;
+        }
+        user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 60, amp));
         super.onUserDamaged(user, attacker, level);
+
     }
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        return super.canAccept(other) && other != ModEnchants.RESISTANCE_ENCHANTMENT;
+        return super.canAccept(other) && other != ModEnchants.LIFELINE_ENCHANTMENT;
     }
 }

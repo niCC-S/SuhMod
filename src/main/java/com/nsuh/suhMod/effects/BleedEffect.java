@@ -15,7 +15,7 @@ public class BleedEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-         entity.damage(DamageSource.OUT_OF_WORLD, amplifier * 1);// true damage
+         entity.damage(DamageSource.OUT_OF_WORLD, amplifier);// true damage
     }
 
     @Override

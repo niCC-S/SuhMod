@@ -41,6 +41,7 @@ public class LifestealEnchantment extends Enchantment {
             user.heal(level / 2.0f);
         }
 
+
         super.onTargetDamaged(user, target, level);
     }
 

@@ -19,7 +19,7 @@ import java.util.Objects;
 public class ExecuteEnchantment extends Enchantment {
 
     public ExecuteEnchantment() {
-        super(Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+        super(Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
     @Override
@@ -43,7 +43,7 @@ public class ExecuteEnchantment extends Enchantment {
 
         if(target instanceof LivingEntity && !user.handSwinging && !Objects.requireNonNull(((LivingEntity) (target)).getRecentDamageSource()).name.equals("arrow"))
         {
-            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(ModEnchants.EXECUTE, 60, 1));
+            ((LivingEntity)(target)).addStatusEffect(new StatusEffectInstance(ModEnchants.EXECUTE, 60, level));
         }
         super.onTargetDamaged(user, target, level);
     }

@@ -14,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 public class ModEnchants {
     public static final StatusEffect EXECUTE = new ExecuteEffect(StatusEffectType.HARMFUL, 0xFFF200);
     public static final StatusEffect BLEED = new BleedEffect(StatusEffectType.HARMFUL, 0xFF0000);
-    public static final StatusEffect LIFELINE_COOLDOWN = new LifelineCooldownEffect(StatusEffectType.HARMFUL, 0);
+    public static final StatusEffect LIFELINE_COOLDOWN = new LifelineCooldownEffect(StatusEffectType.BENEFICIAL, 0);
     //enchants
     public static final Enchantment BLEED_ENCHANTMENT = new BleedEnchantment();
     public static final Enchantment LIFESTEAL_ENCHANTMENT = new LifestealEnchantment();
@@ -22,14 +22,16 @@ public class ModEnchants {
     public static final Enchantment VOLLEY_ENCHANTMENT = new VolleyEnchantment();
     public static final Enchantment EXECUTE_ENCHANTMENT = new ExecuteEnchantment();
     public static final Enchantment LIFELINE_ENCHANTMENT = new LifelineEnchantment();
+    public static final Enchantment RESISTANCE_ENCHANTMENT = new ResistanceEnchantment();
 
     public static void registerItems() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "poison_enchantment"), BLEED_ENCHANTMENT);
+        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "bleed_enchantment"), BLEED_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "lifesteal_enchantment"), LIFESTEAL_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "explosion_enchantment"), EXPLOSION_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "volley_enchantment"), VOLLEY_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "execute_enchantment"), EXECUTE_ENCHANTMENT);
         Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "lifeline_enchantment"), LIFELINE_ENCHANTMENT);
+        Registry.register(Registry.ENCHANTMENT, new Identifier(SuhMod.MOD_ID, "resistance_enchantment"), RESISTANCE_ENCHANTMENT);
 
         Registry.register(Registry.STATUS_EFFECT, new Identifier(SuhMod.MOD_ID, "bleed_effect"), BLEED);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(SuhMod.MOD_ID, "execute_effect"), EXECUTE);

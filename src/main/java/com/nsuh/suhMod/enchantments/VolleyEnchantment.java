@@ -4,13 +4,12 @@ import net.fabricmc.loader.util.sat4j.core.Vec;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.entity.projectile.FireballEntity;
+import net.minecraft.item.FireChargeItem;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 

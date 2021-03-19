@@ -15,11 +15,11 @@ public class ExecuteEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        //World world = entity.world;
-        //LightningEntity lightning = EntityType.LIGHTNING_BOLT.create(world);
-        //lightning.setPos(entity.getX(), entity.getY(), entity.getZ());
-        entity.damage(DamageSource.OUT_OF_WORLD, amplifier * 2.0f); // true damage
-        //world.spawnEntity(lightning);
+        World world = entity.world;
+        LightningEntity lightning = EntityType.LIGHTNING_BOLT.create(world);
+        lightning.setPos(entity.getX(), entity.getY() + 2, entity.getZ());
+        entity.damage(DamageSource.OUT_OF_WORLD, amplifier * 1.0f); // true damage
+        world.spawnEntity(lightning);
     }
 
     @Override

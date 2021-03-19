@@ -25,6 +25,8 @@
   "enchantment.suhmod.explosion_enchantment": "Explode",
   "enchantment.suhmod.volley_enchantment": "Volley",
   "enchantment.suhmod.execute_enchantment": "Execute",
+  "enchantment.suhmod.lifeline_enchantment": "Lifeline",
+  "enchantment.suhmod.resistance_enchantment": "Resistance",
   "effect.suhmod.execute_effect": "Execution",
   "effect.suhmod.bleed_effect": "Bleed",
   "effect.suhmod.lifeline_cooldown_effect": "Lifeline Cooldown"
