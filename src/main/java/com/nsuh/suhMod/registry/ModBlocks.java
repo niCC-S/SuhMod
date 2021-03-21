@@ -1,8 +1,6 @@
 package com.nsuh.suhMod.registry;
 
 import com.nsuh.suhMod.SuhMod;
-import com.nsuh.suhMod.blocks.RubyDoor;
-import com.nsuh.suhMod.blocks.RubyDoorEntity;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -31,6 +29,7 @@ public class ModBlocks {
             .requiresTool()
             .strength(3.0F, 6.0F)
             .sounds(BlockSoundGroup.METAL));
+    /*
     public static final Block RUBY_DOOR = new RubyDoor( FabricBlockSettings
             .of(Material.METAL)
             .breakByTool(FabricToolTags.PICKAXES, 4)
@@ -38,7 +37,7 @@ public class ModBlocks {
             .strength(3.0F, 6.0F)
             .sounds(BlockSoundGroup.METAL));
     public static BlockEntityType<RubyDoorEntity> RUBY_DOOR_ENTITY;
-
+    */
     public static final Block RUBY_ORE = new Block( FabricBlockSettings
             .of(Material.METAL)
             .breakByTool(FabricToolTags.PICKAXES, 2)

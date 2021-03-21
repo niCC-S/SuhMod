@@ -15,7 +15,7 @@ public class ModItems {
 
     //block items
     public static final BlockItem RUBY_BLOCK = new BlockItem(ModBlocks.RUBY_BLOCK, new Item.Settings().group(SuhMod.ITEM_GROUP ));
-    public static final BlockItem RUBY_DOOR = new BlockItem(ModBlocks.RUBY_DOOR, new Item.Settings().group(SuhMod.ITEM_GROUP));
+    //public static final BlockItem RUBY_DOOR = new BlockItem(ModBlocks.RUBY_DOOR, new Item.Settings().group(SuhMod.ITEM_GROUP));
     public static final BlockItem RUBY_ORE = new BlockItem(ModBlocks.RUBY_ORE, new Item.Settings().group(SuhMod.ITEM_GROUP ));
 
     //tool items?
@@ -76,7 +76,7 @@ public class ModItems {
         //Enchants
 
 
-        Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "ruby_door"), RUBY_DOOR);
+       // Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "ruby_door"), RUBY_DOOR);
 
         Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "ruby_ore"), RUBY_ORE);
 

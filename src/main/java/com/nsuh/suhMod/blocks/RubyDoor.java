@@ -13,7 +13,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-
+/*
 public class RubyDoor extends DoorBlock implements BlockEntityProvider {
 
     public RubyDoor(Settings settings) {
@@ -45,7 +45,7 @@ public class RubyDoor extends DoorBlock implements BlockEntityProvider {
         }
 
 
-        /*
+
         if(!world.isClient)
         {
             BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -59,7 +59,7 @@ public class RubyDoor extends DoorBlock implements BlockEntityProvider {
 
             }
 
-        }*/
+        }
         return ActionResult.SUCCESS;
     }
 
@@ -77,4 +77,4 @@ public class RubyDoor extends DoorBlock implements BlockEntityProvider {
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
     }
-}
+}*/

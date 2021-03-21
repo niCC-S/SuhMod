@@ -12,8 +12,9 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
 import net.minecraft.util.collection.DefaultedList;
 import org.lwjgl.system.Pointer;
-
+/*
 public class RubyDoorEntity extends BlockEntity{
+
     private int[] players;
     int counter;
 
@@ -70,4 +71,4 @@ public class RubyDoorEntity extends BlockEntity{
             System.out.println(i);
     }
 
-}
+}*/
