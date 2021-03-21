@@ -17,6 +17,7 @@ public class ExecuteEffect extends StatusEffect {
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         World world = entity.world;
         LightningEntity lightning = EntityType.LIGHTNING_BOLT.create(world);
+        assert lightning != null;
         lightning.setPos(entity.getX(), entity.getY() + 2, entity.getZ());
         entity.damage(DamageSource.OUT_OF_WORLD, amplifier * 1.0f); // true damage
         world.spawnEntity(lightning);

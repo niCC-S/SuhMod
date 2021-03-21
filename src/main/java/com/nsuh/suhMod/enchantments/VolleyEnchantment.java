@@ -47,6 +47,7 @@ public class VolleyEnchantment extends Enchantment {
                 arrowArray[i] = EntityType.ARROW.create(world);
             }
 
+            assert arrowArray[0] != null;
             arrowArray[0].setPos(target.getX(), target.getY() + height + (5 * Math.random()), target.getZ());
             arrowArray[1].setPos(target.getX() + 1 + random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() + random * Math.random() - 0.6f);
             arrowArray[2].setPos(target.getX() - 1 - random * Math.random(), target.getY() + height + (5 * Math.random()), target.getZ() + random * Math.random() - 0.6f);
@@ -58,11 +59,10 @@ public class VolleyEnchantment extends Enchantment {
             arrowArray[8].setPos(target.getX() + random * Math.random() - 0.6f, target.getY() + height + (5 * Math.random()), target.getZ() - 1 - random * Math.random());
 
 
-            for(int i = 0; i < arrowArray.length; i++)
-            {
+            for (ArrowEntity arrowEntity : arrowArray) {
                 //arrowArray[i].setVelocity(arrowArray[i].getX(), arrowArray[i].getY(), arrowArray[i].getZ(), 10.0f, 1);
-                arrowArray[i].setVelocity(0, -3 + (-1 * level),0);
-                world.spawnEntity(arrowArray[i]);
+                arrowEntity.setVelocity(0, -3 + (-1 * level), 0);
+                world.spawnEntity(arrowEntity);
             }
 
         }
