@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "minecraft:emerald_ore",
+              "name": "suhmod:ruby_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",

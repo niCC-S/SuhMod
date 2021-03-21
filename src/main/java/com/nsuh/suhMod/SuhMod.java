@@ -5,16 +5,8 @@ import com.nsuh.suhMod.registry.ModEnchants;
 import com.nsuh.suhMod.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.loot.ConstantLootTableRange;
-import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.entry.LootTableEntry;
-import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.function.SetLootTableLootFunction;
 import net.minecraft.util.Identifier;
 
 public class SuhMod implements ModInitializer {
@@ -31,6 +23,7 @@ public class SuhMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
         ModItems.registerItems();
         ModBlocks.registerBlocks();
         ModEnchants.registerItems();

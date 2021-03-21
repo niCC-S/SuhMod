@@ -16,6 +16,8 @@ public class ModItems {
     //block items
     public static final BlockItem RUBY_BLOCK = new BlockItem(ModBlocks.RUBY_BLOCK, new Item.Settings().group(SuhMod.ITEM_GROUP ));
     public static final BlockItem RUBY_DOOR = new BlockItem(ModBlocks.RUBY_DOOR, new Item.Settings().group(SuhMod.ITEM_GROUP));
+    public static final BlockItem RUBY_ORE = new BlockItem(ModBlocks.RUBY_ORE, new Item.Settings().group(SuhMod.ITEM_GROUP ));
+
     //tool items?
     public static final ToolItem RUBY_PICKAXE = new ModPickaxe(RubyMaterial.INSTANCE, 5, -2.8f, new Item.Settings().group(SuhMod.ITEM_GROUP));
     public static final ToolItem RUBY_SHOVEL = new ShovelItem(RubyMaterial.INSTANCE, 5.5f, -3.0f, new Item.Settings().group(SuhMod.ITEM_GROUP));
@@ -76,6 +78,7 @@ public class ModItems {
 
         Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "ruby_door"), RUBY_DOOR);
 
+        Registry.register(Registry.ITEM, new Identifier(SuhMod.MOD_ID, "ruby_ore"), RUBY_ORE);
 
 
     }

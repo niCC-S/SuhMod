@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "suhmod:ruby_axe"
+    "suhmod:ruby_axe",
+    "suhmod:ruby_digging_tool"
   ]
 }

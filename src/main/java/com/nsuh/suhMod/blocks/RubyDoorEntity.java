@@ -1,16 +1,22 @@
 package com.nsuh.suhMod.blocks;
 
 import com.nsuh.suhMod.registry.ModBlocks;
+import io.github.cottonmc.cotton.gui.PropertyDelegateHolder;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventories;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.screen.PropertyDelegate;
+import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
+import net.minecraft.util.collection.DefaultedList;
+import org.lwjgl.system.Pointer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class RubyDoorEntity extends BlockEntity {
+public class RubyDoorEntity extends BlockEntity{
     private int[] players;
     int counter;
+
     public RubyDoorEntity(){
         super(ModBlocks.RUBY_DOOR_ENTITY);
         players = new int[10];
@@ -33,6 +39,7 @@ public class RubyDoorEntity extends BlockEntity {
         this.players = tag.getIntArray("players");
 
     }
+
 
     public void add(int player)
     {
@@ -62,6 +69,5 @@ public class RubyDoorEntity extends BlockEntity {
         for(Integer i : players)
             System.out.println(i);
     }
-
 
 }

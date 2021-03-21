@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "suhmod:ruby_pickaxe"
+    "suhmod:ruby_pickaxe",
+    "suhmod:ruby_digging_tool"
   ]
 }
