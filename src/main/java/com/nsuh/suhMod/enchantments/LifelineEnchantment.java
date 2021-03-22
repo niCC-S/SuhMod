@@ -43,7 +43,7 @@ public class LifelineEnchantment extends Enchantment {
         if(user.getHealth() < 10.0f && !user.hasStatusEffect(ModEnchants.LIFELINE_COOLDOWN))
         {
             ((PlayerEntity)(user)).playSound(SoundEvents.BLOCK_BELL_USE, 20.0f, 1.0f); //try type casting to palyer
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200, level));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200, level - 1));
             user.addStatusEffect(new StatusEffectInstance(ModEnchants.LIFELINE_COOLDOWN, 6000, 0));
         }
         super.onUserDamaged(user, attacker, level);
