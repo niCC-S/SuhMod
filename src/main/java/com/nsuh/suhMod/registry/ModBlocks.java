@@ -47,7 +47,7 @@ public class ModBlocks {
 
     //vein size here :D
     private static final ConfiguredFeature<?, ?> RUBY_ORE_OVERWORLD = Feature.ORE.configure(
-            new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, RUBY_ORE.getDefaultState(), 4))
+            new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, RUBY_ORE.getDefaultState(), 3))
             .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 1, 16)))
             .spreadHorizontally()
             .repeat(2);

@@ -36,15 +36,16 @@ public class ResistanceEnchantment extends Enchantment {
 
     @Override
     public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
-        System.out.println("test");
         int amp;
-        if(user.getStatusEffect(StatusEffects.RESISTANCE) == null) {
+        int random = (int)(Math.random() * 2);
+        if (user.getStatusEffect(StatusEffects.RESISTANCE) == null) {
             amp = 0;
-        }
-        else {
+        } else if (random == 1){
             amp = 1 + Objects.requireNonNull(user.getStatusEffect(StatusEffects.RESISTANCE)).getAmplifier();
+        } else {
+            amp = Objects.requireNonNull(user.getStatusEffect(StatusEffects.RESISTANCE)).getAmplifier();
         }
-        if(amp > level - 1) {
+        if (amp > level - 1) {
             amp = level - 1;
         }
         user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 60, amp));
